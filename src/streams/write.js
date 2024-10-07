@@ -17,7 +17,7 @@ const write = async () => {
         });
 
     } catch (e) {
-        throw new Error(`Error during read streaming: ${e.message}`);
+        throw new Error(`Error during write streaming: ${e.message}`);
     }
 };
 
