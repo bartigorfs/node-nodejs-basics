@@ -18,7 +18,7 @@ const compress = async () => {
             const writeStream = createWriteStream(SAVE_COMPRESSED);
 
             await pipe(readStream, gzip, writeStream)
-                .then(() => process.stdout.write(`File location: ${SAVE_COMPRESSED}`));
+                .then(() => console.log(`File location: ${SAVE_COMPRESSED}`));
         })
     } catch (e) {
         throw new Error(`Error during compression: ${e.message}`);

@@ -21,7 +21,7 @@ const decompress = async () => {
 
         await pipe(STREAM_FROM, GZIP, STREAM_TO);
 
-        process.stdout.write(`File location: ${SAVE_COMPRESSED}`);
+        console.log(`File location: ${SAVE_COMPRESSED}`);
     } catch (e) {
         throw new Error(`Error during decompression: ${e.message}`);
     }
